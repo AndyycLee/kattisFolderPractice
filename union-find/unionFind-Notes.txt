@@ -1,0 +1,87 @@
+in ACM:
+
+
+currentlySeenIngredientsAndTheirIngredientCount = {}
+count = 0
+parent = {}
+
+rank = collections.defaultdict(int)
+
+
+
+while in ladice I use
+
+a 
+
+
+numOfItems, numOfDrawers = map(int, input().split()   )
+
+drawerParentCapacity = {i:1 for i in range(1, numOfDrawers + 1)} # every drawer parent initially starts with one capacity - represnesting itself
+
+rank = [-1] + [1 for _ in range(numOfDrawers) ]
+parent = [-1] + [ i for i in range(1, numOfDrawers + 1)]
+
+
+IN both cases:
+I use a dictionary, to map the parent : to a certain Count
+
+
+in LADICE: the dictionary maps the parentDrawer : CountOFRemainingSpace
+of that parentDrawer (group)
+
+
+in ACM: the dictionary maps a cauldron: to it's size, meaning how many ingredients are in a group (cauldron/recipe)
+for every future recipe, check if it's ingredients all can be contained within any existing cauldron (remember, might be 2 cauldrons which dont share ingredients, which are then combined in a larger recipe)
+
+/ a new cauldron will be created for this ingredient (and it's not a subset of a cauldron)
+
+since subsets don't work, because
+existingCauldrons = [1,2,3,4], [9], [88, 89,90]   
+
+we see [1,2,3]. This belongs to a cauldron, but the cauldron has more ingredients so we can't form this cauldron
+
+BOTH rely on mapping a certain  parentGroup -> parentCounter
+
+
+some differences:
+
+in ladice: you're given the drawers initially (all of our nodes) so you cant initilize it's size as a group
+and UNION, combines those sizes:
+    if rank[drawerAParent] > rank[drawerBParent]:
+
+        # union drawerB's parent to drawerA
+        parent[drawerBParent] = drawerAParent
+
+        drawerParentCapacity[drawerAParent] += drawerParentCapacity[drawerBParent]
+
+
+in drawerParentCapacity = {i:1 for i in range(1, numOfDrawers + 1)} # every drawer parent initially starts with one capacity - represnesting itself
+
+
+WHEREAS ACM:
+
+you're not given the set of nodes, and merge them as you go, meaning in FIND
+
+def find(node):
+
+    if node not in parent:
+        rank[node] = 0
+        currentlySeenIngredientsAndTheirIngredientCount[node] = 1
+        
+        parent[node] = node
+    
+    if parent[node] == node: return node
+
+    # path compression
+    parent[node] = find(parent[node])
+    return parent[node]
+
+
+you must initialize the each node initially as it's parent
+
+currentlySeenIngredientsAndTheirIngredientCount[node] = 1
+
+if it's new, so that later when you UNION ingredients in a recipe, you merge that sum of
+parentGroup : ingredientsSize
+
+as thats the cauldron (each node is a a ingredient, unioned together to map to its size)

@@ -1,0 +1,13 @@
+remember for graphs, the purpose of the visit set is:
+
+1. Preventing Infinite Loops (Cycles)
+In a grid, you can move from Cell A to Cell B, and then from Cell B back to Cell A. Without a visit set, your BFS would bounce back and forth between those two cells forever. The visit set acts as a "been there, done that" list. Once a cell is in the set, the BFS ignores it if it sees it again.
+
+2. Defining "Ownership" of a Component
+In the Terraces problem (or similar "Connected Components" problems like Islands), you are trying to group identical cells together.
+
+The visit set ensures that each cell is processed exactly once.
+
+Once a BFS finishes exploring a "flat" area of height 10, all those cells are added to visit.
+
+This tells the main for loop: "Don't start a new search here; we’ve already decided if this entire plateau can grow rice or not."

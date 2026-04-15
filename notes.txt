@@ -1,0 +1,44 @@
+python anothercandles.py < a.in > a.out
+
+
+diff -yZW 100 a.out a.ans
+
+
+Just reflecting on the fact that
+I have two main-issues
+
+for simple algorithims/intuitive I have no problem with realy recognizing the desired approach, what data structures to use
+
+
+my challenge usually comes in implementation details, or understanding what the testcase is asking
+minor bugs/coding mishaps that disrupt myt flow in debugging/appraoch confirming
+
+and my typing speed and implementation speed are suepr slow
+
+4/5/2026
+
+MY BIGGEST HUDLE IS THAT FACT THAT EVEN IF I IDENTIFY THE RIGHT ALGORITHIM, IT TAKES ME SO LONG TO IDEATE THE STEPS REQRUIED, WALK THROGUH THE  TESCASE, TO ACTUALLY CODE IT UP
+AND THATS ALSO SO SLOW TO THINK OF THE VALID APPRAOCH SOMETIMES, EVEN IF I KNOW THE PATTERn/ALGORITHIM
+
+AHHHHHHHHHHHH
+
+
+
+4/6/2026
+
+Something else to note:
+
+I enjoy problem-solving, by reading some of the PSETS the ngiht before, and thinking on them
+throughout the day/when trying to sleep
+
+the mental energy usually helps me sleep becase the problems are HARD
+
+and this spiderman's workout, I did this strategy
+
+and rather than asking AI, I just thougth about it throughout the previous night, and day, and night
+
+and I thought of a apparoach that might work
+
+
+PART OFTHE REASON IM C0OKED SOMETIMES IS BECAUSE I ALREADY KNOW THE PATTERN KINDA - SINCE THE PSET IS LABELLED WITH THE PROBLEM,
+BUT I MIGHT BE COOKEED IN CONTEST SCENARIO CUZ THERES NO HITNS ON THE PROBLEM/DATA STRUCTURE TYPE
