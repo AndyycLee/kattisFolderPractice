@@ -3,7 +3,6 @@
 for n ranges, we are gonna run union find on the set of problems
 
 I had 
-
 """
 import collections, sys
 
@@ -160,5 +159,22 @@ I don't reset r % n
 
 I do that outside to calcualte x and y
 
+final notes:
+
+I probably deserve a bit less grade in both technical and other aspects
+
+I have really slow coding speed
+
+I'm pretty proud of the fact I was able to solve this in less than a hour, with no AI debugging, and I could manually debug it on my own
+! probably a testament to my learning unionFind I can solve it decently fast, implement the patterns (i kinda glanced at my old union find code tho)
+and also got better at manual debugging and inspecting for errors, which is a skill I really need to work on
+
+some bugs I noticced were:
+
+typos, using resetinng the prevRValue to xbeforeMod, rather than ybeforeMod
+
+helper was using r, not prevRValue
+
+goodjob on weird f string avoiding concatenation formatting
 
 """
