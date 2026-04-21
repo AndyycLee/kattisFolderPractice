@@ -177,4 +177,10 @@ helper was using r, not prevRValue
 
 goodjob on weird f string avoiding concatenation formatting
 
+also recognizing not to reset r % n in herlper, but handle that in x, y calc
+and also deritinvg that union between two groups is okay andcounts as a valid union, 
+our union find jsut wont add thsoe groups, but it
+still counts for             numOfSuccessfulConnectionAttempts += 1
+
+
 """
