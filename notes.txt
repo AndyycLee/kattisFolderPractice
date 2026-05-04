@@ -42,3 +42,9 @@ and I thought of a apparoach that might work
 
 PART OFTHE REASON IM C0OKED SOMETIMES IS BECAUSE I ALREADY KNOW THE PATTERN KINDA - SINCE THE PSET IS LABELLED WITH THE PROBLEM,
 BUT I MIGHT BE COOKEED IN CONTEST SCENARIO CUZ THERES NO HITNS ON THE PROBLEM/DATA STRUCTURE TYPE
+
+
+
+5/4/2026
+last note on bitmask dp
+so we use it to encode a state, but if it didnt exist woudl we just being using a array marking elemnets we use added to the array and esle not
